@@ -1,0 +1,118 @@
+<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#0d1420"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="260" fill="url(#bg)"/>
+
+  <!-- circuit traces -->
+  <g fill="none" stroke="#25334a" stroke-width="2" stroke-linecap="round">
+    <path id="traceA" d="M170,96 L300,96 L340,58 L520,58 L560,20"/>
+    <path id="traceB" d="M170,118 L250,118 L250,176 L430,176 L430,220"/>
+    <path id="traceC" d="M170,140 L210,140 L210,224 L370,224"/>
+    <path id="traceD" d="M170,162 L230,162 L280,208 L280,246"/>
+    <path d="M120,80 L120,26 L246,26 L246,8"/>
+    <path d="M120,180 L120,232 L58,232"/>
+    <path d="M70,110 L18,110 L18,54"/>
+    <path d="M70,150 L18,150 L18,206"/>
+    <path id="traceE" d="M170,84 L720,84 L720,42 L940,42"/>
+    <path id="traceF" d="M170,176 L660,176 L660,232 L980,232"/>
+    <path d="M600,20 L600,60 L680,60"/>
+    <path d="M760,232 L760,190 L840,190"/>
+    <path d="M900,42 L960,42 L960,90"/>
+  </g>
+
+  <!-- solder-dot accents at bends/ends -->
+  <g fill="#2c3c54">
+    <circle cx="340" cy="58" r="3"/>
+    <circle cx="560" cy="20" r="3"/>
+    <circle cx="430" cy="220" r="3"/>
+    <circle cx="370" cy="224" r="3"/>
+    <circle cx="280" cy="246" r="3"/>
+    <circle cx="246" cy="8" r="3"/>
+    <circle cx="58" cy="232" r="3"/>
+    <circle cx="18" cy="54" r="3"/>
+    <circle cx="18" cy="206" r="3"/>
+    <circle cx="940" cy="42" r="3"/>
+    <circle cx="980" cy="232" r="3"/>
+    <circle cx="680" cy="60" r="3"/>
+    <circle cx="840" cy="190" r="3"/>
+    <circle cx="960" cy="90" r="3"/>
+  </g>
+
+  <!-- chip glow ring (pulsing) -->
+  <rect x="64" y="74" width="112" height="112" rx="10" fill="none" stroke="#67e8f9" stroke-width="1.6" filter="url(#glow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.25;0.75;0.25" dur="2.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- chip body -->
+  <rect x="70" y="80" width="100" height="100" rx="8" fill="#0f1720" stroke="#22303f" stroke-width="1.5"/>
+
+  <!-- BGA pin grid -->
+  <g fill="#334155">
+    <circle cx="84" cy="94" r="2"/><circle cx="98" cy="94" r="2"/><circle cx="112" cy="94" r="2"/><circle cx="126" cy="94" r="2"/><circle cx="140" cy="94" r="2"/><circle cx="154" cy="94" r="2"/>
+    <circle cx="84" cy="108" r="2"/><circle cx="98" cy="108" r="2"/><circle cx="112" cy="108" r="2"/><circle cx="126" cy="108" r="2"/><circle cx="140" cy="108" r="2"/><circle cx="154" cy="108" r="2"/>
+    <circle cx="84" cy="122" r="2"/><circle cx="98" cy="122" r="2"/><circle cx="112" cy="122" r="2"/><circle cx="126" cy="122" r="2"/><circle cx="140" cy="122" r="2"/><circle cx="154" cy="122" r="2"/>
+    <circle cx="84" cy="136" r="2"/><circle cx="98" cy="136" r="2"/><circle cx="112" cy="136" r="2"/><circle cx="126" cy="136" r="2"/><circle cx="140" cy="136" r="2"/><circle cx="154" cy="136" r="2"/>
+    <circle cx="84" cy="150" r="2"/><circle cx="98" cy="150" r="2"/><circle cx="112" cy="150" r="2"/><circle cx="126" cy="150" r="2"/><circle cx="140" cy="150" r="2"/><circle cx="154" cy="150" r="2"/>
+    <circle cx="84" cy="164" r="2"/><circle cx="98" cy="164" r="2"/><circle cx="112" cy="164" r="2"/><circle cx="126" cy="164" r="2"/><circle cx="140" cy="164" r="2"/><circle cx="154" cy="164" r="2"/>
+  </g>
+
+  <!-- animated signal pulses traveling the traces -->
+  <circle r="3.2" fill="#7dd3fc" filter="url(#glow)">
+    <animateMotion dur="3.4s" repeatCount="indefinite" begin="0s">
+      <mpath href="#traceA"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1" dur="3.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="3.2" fill="#7dd3fc" filter="url(#glow)">
+    <animateMotion dur="4.1s" repeatCount="indefinite" begin="0.6s">
+      <mpath href="#traceB"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1" dur="4.1s" repeatCount="indefinite" begin="0.6s"/>
+  </circle>
+  <circle r="3.2" fill="#67e8f9" filter="url(#glow)">
+    <animateMotion dur="3.8s" repeatCount="indefinite" begin="1.4s">
+      <mpath href="#traceC"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.85;1" dur="3.8s" repeatCount="indefinite" begin="1.4s"/>
+  </circle>
+  <circle r="3" fill="#7dd3fc" filter="url(#glow)">
+    <animateMotion dur="5.2s" repeatCount="indefinite" begin="0.3s">
+      <mpath href="#traceE"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.88;1" dur="5.2s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+  <circle r="3" fill="#67e8f9" filter="url(#glow)">
+    <animateMotion dur="4.7s" repeatCount="indefinite" begin="2s">
+      <mpath href="#traceF"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.88;1" dur="4.7s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <circle r="3" fill="#a5f3fc" filter="url(#glow)">
+    <animateMotion dur="3.1s" repeatCount="indefinite" begin="1s">
+      <mpath href="#traceD"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="3.1s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+
+  <!-- name + tagline -->
+  <text x="230" y="118" font-family="Consolas, 'Fira Code', monospace" font-size="46" font-weight="700" fill="#e6edf3" letter-spacing="1">ABISHEK GURU</text>
+  <text x="232" y="150" font-family="Consolas, 'Fira Code', monospace" font-size="17" fill="#7dd3fc" letter-spacing="3">ELECTRONICS ENGINEER</text>
+  <text x="232" y="176" font-family="Consolas, 'Fira Code', monospace" font-size="13.5" fill="#8ea2b8" letter-spacing="1">VLSI / RTL  ·  ANALOG &amp; PCB  ·  EMBEDDED SYSTEMS</text>
+
+  <!-- blinking cursor -->
+  <rect x="232" y="184" width="9" height="14" fill="#7dd3fc">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

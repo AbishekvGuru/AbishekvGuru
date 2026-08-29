@@ -3,10 +3,11 @@
 <img src="https://raw.githubusercontent.com/AbishekvGuru/AbishekvGuru/main/assets/circuit-banner.svg" width="100%" alt="Abishek Guru — Electronics Engineer"/>
 
 <a href="https://linkedin.com/in/mabishekguru2006">
-  <img src="https://img.shields.io/badge/--0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <img src="https://raw.githubusercontent.com/AbishekvGuru/AbishekvGuru/main/assets/icon-linkedin.svg" width="44" height="44" alt="LinkedIn"/>
 </a>
+&nbsp;
 <a href="mailto:abishekguruwork@gmail.com">
-  <img src="https://img.shields.io/badge/--EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  <img src="https://raw.githubusercontent.com/AbishekvGuru/AbishekvGuru/main/assets/icon-mail.svg" width="44" height="44" alt="Email"/>
 </a>
 
 <sub>Chennai, India · VIT Vellore</sub>

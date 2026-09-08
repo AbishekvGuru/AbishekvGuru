@@ -84,7 +84,7 @@ Outside coursework, I serve as Secretary of IEEE Circuits and Systems (CAS) at V
 
 ## Achievements
 
-- **6× Hackathon Winner** — Hack-a-Tron Yantra'24, PCB Showdown Gravitas'24, ElectroHack Yantra'25, Electroutsav Hackathon, Hackulus Gravitas'25, Celestia Gravitas'25
+- **7× Hackathon Winner** — Hack-a-Tron Yantra'24, PCB Showdown Gravitas'24, ElectroHack Yantra'25, Electroutsav Hackathon, Hackulus Gravitas'25, Celestia Gravitas'25
 - **Secretary, IEEE Circuits and Systems (CAS), VIT** — organized technical events and mentored members in circuits, embedded systems, and PCB design
 - **Workshop Lead, "PCB Nexus"** — led a hands-on KiCad PCB design workshop for 100+ participants, schematic through fabrication-ready output
 - **Student Volunteer** — VDAT 2024, ITC India 2025 & 2026
